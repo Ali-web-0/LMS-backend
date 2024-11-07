@@ -32,10 +32,10 @@ app.use('/api/admin', require('./routes/leavetype'));
 app.use('/api/admin', require('./routes/department'));
 app.use('/api/admin', require('./routes/leavePolicy'));
 
-app.use(express.static(path.join(__dirname, './client/build')));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
+// app.use(express.static(path.join(__dirname, './client/build')));
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, './client/build/index.html'));
+// });
 const PORT = 5000 || process.env.PORT;
 app.listen(PORT, console.log(`Server running on  ${PORT}`));
 module.exports = app;
